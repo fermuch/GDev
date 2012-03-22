@@ -1,0 +1,27 @@
+application: GDev
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /scripts
+  static_dir: scripts
+
+- url: /images
+  static_dir: images
+
+- url: /modules
+  static_dir: modules
+
+- url: /templates
+  static_dir: templates
+
+- url: /.*
+  script: main.py
+
+builtins:
+- datastore_admin: on
+
