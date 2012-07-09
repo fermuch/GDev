@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Gdev - Corrientes GDG</title>
+    <meta name="description" content="Colaboradores GDG Corrientes">
+    <meta name="author" content="GDG Corrientes - Rep. Argentina">
+    <!—[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]—>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body { padding-top: 60px; }
+    </style>
+    <link href="../bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">GDev - Corrientes GDG</a>
+      <div class="btn-group pull-right">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="icon-user"></i> {{usuario}}
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Perfil</a></li>
+              <li class="divider"></li>
+              <li><a href="{{diracceso}}">{{estado}}</a></li>
+            </ul>
+          </div>
+      <ul class="nav">
+        <li class="active"><a href="#">Inicio</a></li>
+        <li><a href="#about">Acerca de</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
