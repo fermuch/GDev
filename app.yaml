@@ -1,9 +1,12 @@
-application: GDev
+application: gdev
 version: 1
 runtime: python
 api_version: 1
 
 handlers:
+- url: /bootstrap
+  static_dir: bootstrap
+
 - url: /stylesheets
   static_dir: stylesheets
 
@@ -15,9 +18,6 @@ handlers:
 
 - url: /modules
   static_dir: modules
-
-- url: /templates
-  static_dir: templates
 
 - url: /.*
   script: main.py
