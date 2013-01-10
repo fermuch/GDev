@@ -1,27 +1,3 @@
-class Preceptores(db.Model):
-    nombre = db.StringProperty(required=True, multiline=False)
-    apellido = db.StringProperty(required=True, multiline=False)
-    dni = db.IntegerProperty()
-    email = db.EmailProperty(required=True)
-
-
-class Alumnos(db.Model):
-    nombre = db.StringProperty(required=True, multiline=False)
-    apellido = db.StringProperty(required=True, multiline=False)
-    dni = db.IntegerProperty(required=True)
-    curso = db.IntegerProperty(required=True)
-    division = db.StringProperty(required=True)
-    asignatura = db.StringProperty(required=True, multiline=False)
-    examen = db.StringProperty(required=True,
-                                multiline=False,
-                                choices=set(["LIBRES",
-                                            "PREVIOS",
-                                            "EQUIVALENCIAS",
-                                            "COMPLEMENTARIOS",
-                                            "REGULARES"]))
-    fecha_insc = db.DateTimeProperty(auto_now_add=True)
-    inscripto_por = db.UserProperty(required=True)
-
 class UsuarioG(db.Model):
     def __init__(self):
         if users.get_current_user():

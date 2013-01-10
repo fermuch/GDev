@@ -4,17 +4,14 @@ runtime: python
 api_version: 1
 
 handlers:
-- url: /bootstrap
-  static_dir: bootstrap
+- url: /css
+  static_dir: css
 
-- url: /stylesheets
-  static_dir: stylesheets
+- url: /js
+  static_dir: js
 
-- url: /scripts
-  static_dir: scripts
-
-- url: /images
-  static_dir: images
+- url: /img
+  static_dir: img
 
 - url: /modules
   static_dir: modules
