@@ -8,7 +8,8 @@
     <!—[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]—>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="shortcut icon" href="/img/confondo.png" >
     <style>
       body { padding-top: 60px; }
@@ -21,16 +22,9 @@
         <div class="container">
          <a class="brand" href="/">GDev - Corrientes GDG</a>
          <div class="btn-group pull-right">
-            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              <i class="icon-user"></i> {{usuario}}
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Perfil</a></li>
-              <li class="divider"></li>
-              <li><a href="{{diracceso}}">{{estado}}</a></li>
-            </ul>
-          </div>
+           {{estado}}
+           {{menudrop}}
+         </div>
       <ul class="nav">
         <li class="active"><a href="#">Inicio</a></li>
         <li><a href="#about">Acerca de</a></li>

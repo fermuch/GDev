@@ -7,4 +7,14 @@ Surge de la necesidad de conocer las habilidades de los mienbros del grupo para 
 
 Realizado con Google App Engine.
 
-Visítenos en [ https://sites.google.com/site/proyectogdev/ ]
+( https://sites.google.com/site/proyectogdev/ "Visítenos")
+
+Novedades
+---------
+
+2013-01-10 bootstrap personalizado (desabilitado el soporte para glyphicons para poder usar Font Awesome)
+
+To do
+-----
+
+[] Atribuir las Font Awesome por la licencia CC (puede ir en "Acerca de")
