@@ -21,8 +21,8 @@ Novedades
 To do
 -----
 
-[ ]Atribuir las Font Awesome por la licencia CC (puede ir en "Acerca de")
+- [ ] Atribuir las Font Awesome por la licencia CC (puede ir en "Acerca de")
 
-[ ]Reemplazar el método actual de login por OAuth
+- [ ] Reemplazar el método actual de login por OAuth
 
-[x]Personalizar bootstrap
+- [x] Personalizar bootstrap
