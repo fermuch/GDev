@@ -7,18 +7,22 @@ Surge de la necesidad de conocer las habilidades de los mienbros del grupo para 
 
 Realizado con Google App Engine.
 
-( https://sites.google.com/site/proyectogdev/ "Visítenos")
+[Visítenos](https://sites.google.com/site/proyectogdev/)
 
 Novedades
 ---------
 
 2013-01-10 Login a través de OpenID
+
 2013-01-10 bootstrap personalizado (desabilitado el soporte para glyphicons para poder usar Font Awesome)
+
 2013-01-09 Cambios menores (estructura de directorios, etc)
 
 To do
 -----
 
-[ ] Atribuir las Font Awesome por la licencia CC (puede ir en "Acerca de")
-[ ] Reemplazar el método actual de login por OAuth
-[*] Personalizar bootstrap
+[ ]Atribuir las Font Awesome por la licencia CC (puede ir en "Acerca de")
+
+[ ]Reemplazar el método actual de login por OAuth
+
+[x]Personalizar bootstrap
