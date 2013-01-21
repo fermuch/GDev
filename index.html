@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GDev</title>
+	<meta charset="utf-8" />
+	<script src="scripts/jquery/jquery-1.8.3.min.js"></script>
+	<!-- JQuery UI-->
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.9.2.custom.min.css" />
+    <script src="scripts/jquery/jquery-ui-1.9.2.custom.min.js"></script>
+
+	<link rel="stylesheet" href="css/960/reset.css" />
+	<link rel="stylesheet" href="css/960/text.css" />
+	<link rel="stylesheet" href="css/960/960.css" />
+
+	<style type="text/css">
+		body, .container_16{
+			background-color: #F1F1F1;
+		}
+		#encabezado {
+			background-color: #F1F1F1;
+			height: 60px;
+		}
+		#mainContainer {
+			height: 650px;
+			background-color: #FFFFFF;
+			border: thin solid #D7D7D7;
+		}
+		.borde {
+			border: thin solid #D7D7D7;
+		}		
+		.hl {
+			background-color: red;
+		}
+		.color {
+			background-color: blue;
+		}
+		.panel {
+			height: 200px;			
+		}
+		.panel p {
+			font-family: Arial, sans-serif;
+			color: #333;
+			font-size: 13px;
+			margin-top: 100px;
+		}
+		.panel p.titulo {
+			font-size: 25px;
+			font-style: normal;
+			font-weight: normal;
+			text-align: center;
+			margin-top: 50px;
+		}
+		.divisor {
+			height: 50px;	
+		}
+		.barraColores {
+			background: url(img/colored-bars.png) no-repeat scroll left bottom transparent;
+			margin-top: 50px;
+		}
+		img.middle {
+			vertical-align: middle;
+		}
+		.textCenter {
+			text-align: center;
+		}
+		a, a:visited {
+			color: blue;
+		}
+
+	</style>
+
+    <script type="text/javascript">
+
+	var clientId 	= '914958245698';
+	var apiKey 		= 'AIzaSyDniwD4xBZEtyIG4a3EZLsSscN7eYI7-kw';
+	var authUrlBase = 'https://accounts.google.com/o/oauth2/auth';
+	var scopes 		= 'https://www.googleapis.com/auth/plus.me';
+
+	<!-- Sets ApiKey y verifica si está logueado  -->
+	function init() {
+		gapi.client.setApiKey(apiKey);
+		window.setTimeout(checkAuth,1);
+	}
+
+	function checkAuth() {
+		gapi.auth.authorize({
+			client_id: clientId, 
+			scope: scopes, 
+			immediate: true}, handleAuthResult);
+	}
+
+	<!-- Acción del Botón Autorizar  -->
+	function handleAuthClick(event) {
+		gapi.auth.authorize({
+			client_id: clientId, 
+			scope: scopes, 
+			immediate: false}, handleAuthResult);
+		return false;
+	}
+
+	function handleAuthResult(authResult) {
+		if (authResult && !authResult.error) {			
+			window.location = "/main.html"
+		}
+	}
+
+    </script>
+    <!-- Al Cargar la Página, Asíncronamente carga el Cliente JS de Google APIs por Performance -->
+	<script src="https://apis.google.com/js/client.js?onload=init"></script>	
+</head>
+<body>
+	<div class="container_16">
+		<div class="grid_16">
+			<div id="encabezado">
+				&nbsp;
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="grid_16" id="mainContainer">
+			<div class="grid_16 divisor">&nbsp;</div>
+			<div class="clear"></div>
+			<div class="grid_2 alpha">
+				&nbsp;
+			</div>
+			<div class="grid_4 color panel barraColores textCenter">
+				<p>Comparte tu conocimiento, experiencias y proyectos. Publica tu Conocimiento!</p>
+			</div>
+			<div class="grid_4 panel" align="center">
+				<p class="titulo">GDev Perfiles y Proyectos</p>
+				<img src="img/gdg_global.jpeg" width="100px" class="middle">
+			</div>				
+			<div class="grid_4 color panel barraColores textCenter">
+				<p>Busca desarrolladores para tu proyecto, y conoce lo que saben TODOS los miembros de tu Grupo!</p>
+			</div>	
+			<div class="grid_2 omega">
+				&nbsp;
+			</div>	
+			<div class="clear"></div>
+			<div class="grid_16 divisor">&nbsp;</div>
+			<div class="grid_16 divisor">&nbsp;</div>
+			<div class="grid_5 alpha">
+				&nbsp;
+			</div>
+			<div class="grid_6 borde" align="center">
+				 <a href="#" data-ajax="false" id="btnAutorizar" onClick="handleAuthClick()">
+				 	<div>
+				 		<b>
+				 			Login con tu cuenta de Google <img src="img/google_oauth2_256.png" width="100px" class="middle">
+				 		</b>
+				 	</div>
+				 </a>
+			</div>
+			<div class="grid_4 omega">
+				&nbsp;
+			</div>			
+		</div>		
+	</div>
+	
+</body>
+</html>

@@ -15,9 +15,20 @@
       body { padding-top: 60px; }
     </style>
     <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+        <script src="js/OAuthLib.js"></script>
+      <!-- Al Cargar la Página, Asíncronamente carga el Cliente JS de Google APIs por Performance -->
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>      
   </head>
   <body>
-    <div class="navbar navbar-fixed-top">
+    <header class="navbar-fixed-top" style="background-color: #F1F1fF1">
+      <div id="userPanel" align="right">
+        <img id="userFoto"    style="float:right; padding: 5px" src=""/>
+        <div id="userName" style="float:right; padding-top: 17px; color: #666"></div>
+        <input id="userID" type="hidden">
+      </div>
+      
+    </header>
+    <div class="navbar">
       <div class="navbar-inner">
         <div class="container">
          <a class="brand" href="/">GDev - Corrientes GDG</a>
